@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C360A78B22A0196400558936 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C360A78A22A0196400558936 /* main.cpp */; };
+		C360A79422A0197100558936 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C360A79222A0197100558936 /* SDL2.framework */; };
+		C360A79522A0197100558936 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C360A79322A0197100558936 /* SDL2_image.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,16 @@
 /* Begin PBXFileReference section */
 		C360A78722A0196400558936 /* Swarm Natural Selection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Swarm Natural Selection"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C360A78A22A0196400558936 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C360A79222A0197100558936 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		C360A79322A0197100558936 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		C360A79622A0199D00558936 /* blueshroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueshroom.png; sourceTree = "<group>"; };
+		C360A79722A0199D00558936 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		C388663C22A16C5400EF09ED /* dot.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = dot.bmp; sourceTree = "<group>"; };
+		C3FC7D4122BA7B0C004F01CD /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
+		C3FC7D4222BA7B0C004F01CD /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		C3FC7D4322BA7B0C004F01CD /* mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute.png; sourceTree = "<group>"; };
+		C3FC7D4422BA7B0C004F01CD /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
+		C3FC7D4522BA7B0C004F01CD /* _DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = _DS_Store; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C360A79422A0197100558936 /* SDL2.framework in Frameworks */,
+				C360A79522A0197100558936 /* SDL2_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +57,7 @@
 			children = (
 				C360A78922A0196400558936 /* Swarm Natural Selection */,
 				C360A78822A0196400558936 /* Products */,
+				C360A79122A0197100558936 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +72,26 @@
 		C360A78922A0196400558936 /* Swarm Natural Selection */ = {
 			isa = PBXGroup;
 			children = (
+				C3FC7D4522BA7B0C004F01CD /* _DS_Store */,
+				C3FC7D4422BA7B0C004F01CD /* background.wav */,
+				C3FC7D4222BA7B0C004F01CD /* button.png */,
+				C3FC7D4122BA7B0C004F01CD /* button.wav */,
+				C3FC7D4322BA7B0C004F01CD /* mute.png */,
+				C388663C22A16C5400EF09ED /* dot.bmp */,
+				C360A79722A0199D00558936 /* background.png */,
+				C360A79622A0199D00558936 /* blueshroom.png */,
 				C360A78A22A0196400558936 /* main.cpp */,
 			);
 			path = "Swarm Natural Selection";
+			sourceTree = "<group>";
+		};
+		C360A79122A0197100558936 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C360A79322A0197100558936 /* SDL2_image.framework */,
+				C360A79222A0197100558936 /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +272,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +284,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
